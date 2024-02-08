@@ -6,58 +6,41 @@ DEFAULT: &DEFAULT
   num_iterEM: 3
   alpha: 1e0
   group_size: 16
+  shared_epochs: 3
+  specific_epochs: 1
 
-DMG: &DMG
-  model_name: DMG
+FeGis: &FeGis
+  model_name: FeGis
   <<: *DEFAULT
 
-DMG-acm-Node: &DMG-acm-Node
-  <<: *DMG
+FeGis-acm-Node: &FeGis-acm-Node
+  <<: *FeGis
   decolayer: 1
-  encolayer: 2
   lammbda: 1e-3
-  shared_epochs: 3
-  specific_epochs: 1
+
   
-DMG-imdb-Node: &DMG-imdb-Node
-  <<: *DMG
-  decolayer: 2
-  encolayer: 2
-  lammbda: 0.01
-  shared_epochs: 3
-  specific_epochs: 1
-
-DMG-dblp-Node: &DMG-dblp-Node
-  <<: *DMG
-  decolayer: 2
-  encolayer: 2
-  lammbda: 0.5
-  shared_epochs: 3
-  specific_epochs: 1
-
-DMG-pubmed-Node: &DMG-pubmed-Node
-  <<: *DMG
-  dropout: 0.5
-  encolayer: 2
-  decolayer: 2
-  lammbda: 1e-2 
-  shared_epochs: 3
-  specific_epochs: 1
-DMG-citeseer-Node: &DMG-citeseer-Node
-  <<: *DMG
-  dropout: 0.5
-  encolayer: 2
-  decolayer: 2
+FeGis-imdb-Node: &FeGis-imdb-Node
+  <<: *FeGis
   lammbda: 1e-2
-  shared_epochs: 3
-  specific_epochs: 1
-DMG-cora-Node: &DMG-cora-Node
-  <<: *DMG
+
+
+FeGis-dblp-Node: &FeGis-dblp
+  <<: *FeGis
+  lammbda: 0.5
+
+FeGis-pubmed-Node: &FeGis-pubmed
+  <<: *FeGis
   dropout: 0.5
-  encolayer: 2
-  decolayer: 2
   lammbda: 1e-2 
-  shared_epochs: 3
-  specific_epochs: 1
-  common_dim: 32
+
+FeGis-citeseer-Node: &FeGis-citeseer
+  <<: *FeGis
+  dropout: 0.5
+  lammbda: 1e-2
+
+FeGis-cora-Node: &FeGis-cora
+  <<: *FeGis
+  dropout: 0.5
+  lammbda: 1e-2 
+
 

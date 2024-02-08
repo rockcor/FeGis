@@ -1,2 +1,2 @@
 # FeGis
-Cooperative Graph Learning for Privacy Preservation
+Cooperative Graph Learning for Link Privacy Preservation

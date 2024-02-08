@@ -1,0 +1,63 @@
+DEFAULT: &DEFAULT
+  num_try: 5
+  sc: 0
+  num_iters: 50
+  common_dim: 32
+  num_iterEM: 3
+  alpha: 1e0
+  group_size: 16
+
+DMG: &DMG
+  model_name: DMG
+  <<: *DEFAULT
+
+DMG-acm-Node: &DMG-acm-Node
+  <<: *DMG
+  decolayer: 1
+  encolayer: 2
+  lammbda: 1e-3
+  shared_epochs: 3
+  specific_epochs: 1
+  
+DMG-imdb-Node: &DMG-imdb-Node
+  <<: *DMG
+  decolayer: 2
+  encolayer: 2
+  lammbda: 0.01
+  shared_epochs: 3
+  specific_epochs: 1
+
+DMG-dblp-Node: &DMG-dblp-Node
+  <<: *DMG
+  decolayer: 2
+  encolayer: 2
+  lammbda: 0.5
+  shared_epochs: 3
+  specific_epochs: 1
+
+DMG-pubmed-Node: &DMG-pubmed-Node
+  <<: *DMG
+  dropout: 0.5
+  encolayer: 2
+  decolayer: 2
+  lammbda: 1e-2 
+  shared_epochs: 3
+  specific_epochs: 1
+DMG-citeseer-Node: &DMG-citeseer-Node
+  <<: *DMG
+  dropout: 0.5
+  encolayer: 2
+  decolayer: 2
+  lammbda: 1e-2
+  shared_epochs: 3
+  specific_epochs: 1
+DMG-cora-Node: &DMG-cora-Node
+  <<: *DMG
+  dropout: 0.5
+  encolayer: 2
+  decolayer: 2
+  lammbda: 1e-2 
+  shared_epochs: 3
+  specific_epochs: 1
+  common_dim: 32
+

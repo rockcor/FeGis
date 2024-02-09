@@ -13,32 +13,32 @@ FeGis: &FeGis
   model_name: FeGis
   <<: *DEFAULT
 
-FeGis-acm-Node: &FeGis-acm-Node
+FeGis-acm: &FeGis-acm
   <<: *FeGis
   decolayer: 1
   lammbda: 1e-3
 
   
-FeGis-imdb-Node: &FeGis-imdb-Node
+FeGis-imdb: &FeGis-imdb
   <<: *FeGis
   lammbda: 1e-2
 
 
-FeGis-dblp-Node: &FeGis-dblp
+FeGis-dblp: &FeGis-dblp
   <<: *FeGis
   lammbda: 0.5
 
-FeGis-pubmed-Node: &FeGis-pubmed
+FeGis-pubmed: &FeGis-pubmed
   <<: *FeGis
   dropout: 0.5
   lammbda: 1e-2 
 
-FeGis-citeseer-Node: &FeGis-citeseer
+FeGis-citeseer: &FeGis-citeseer
   <<: *FeGis
   dropout: 0.5
   lammbda: 1e-2
 
-FeGis-cora-Node: &FeGis-cora
+FeGis-cora: &FeGis-cora
   <<: *FeGis
   dropout: 0.5
   lammbda: 1e-2 

@@ -30,17 +30,14 @@ FeGis-dblp: &FeGis-dblp
 
 FeGis-pubmed: &FeGis-pubmed
   <<: *FeGis
-  dropout: 0.5
   lammbda: 1e-2 
 
 FeGis-citeseer: &FeGis-citeseer
   <<: *FeGis
-  dropout: 0.5
   lammbda: 1e-2
 
 FeGis-cora: &FeGis-cora
   <<: *FeGis
-  dropout: 0.5
   lammbda: 1e-2 
 
 

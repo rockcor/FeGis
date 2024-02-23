@@ -148,7 +148,7 @@ traitlets==5.9.0
 triton==2.0.0
 typing-extensions==4.9.0
 uri-template==1.2.0
-urllib3=1.26.6
+urllib3==1.26.6
 wcwidth==0.2.6
 webcolors==1.12
 webencodings==0.5.1
